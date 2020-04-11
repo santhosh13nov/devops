@@ -2,6 +2,7 @@ node {
 
   try {
     def mvnHome
+    def jdk
     def pom
     def artifactVersion
     def tagVersion
@@ -9,6 +10,9 @@ node {
 
     stage('Prepare') {
       mvnHome = tool 'maven'
+      jdk = tool 'jdk11'
+      env.JAVA_HOME = "${jdk]"
+      
     }
 
     stage('Checkout') {
