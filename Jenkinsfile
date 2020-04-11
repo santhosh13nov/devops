@@ -11,7 +11,7 @@ node {
     stage('Prepare') {
       mvnHome = tool 'maven'
       jdk = tool 'jdk11'
-      env.JAVA_HOME = "${jdk]"
+      env.JAVA_HOME = "${jdk}"
       
     }
 
